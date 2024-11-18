@@ -32,7 +32,7 @@ end
 
 return {
 	'neovim/nvim-lspconfig',
-	ft = { 'lua', 'rust' },
+	ft = { 'lua', 'rust', 'python' },
 	opts = {
 		servers = {
 			lua_ls = {
@@ -40,6 +40,13 @@ return {
 					Lua = {
 						workspace = { checkThirdParty = false },
 						telemetry = { enable = false },
+					},
+				},
+			},
+			ruff_lsp = {
+				settings = {
+					ruff_lsp = {
+						args = {},
 					},
 				},
 			},
