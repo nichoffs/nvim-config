@@ -10,4 +10,7 @@ vim.opt.softtabstop = 2
 -- use number of spaces to insert a <Tab>
 vim.opt.expandtab = true
 
+-- move down cmd line
+vim.cmd("set cmdheight=0")
+
 vim.g.mapleader = " "
