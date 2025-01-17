@@ -58,6 +58,19 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach, -- Attach keymaps
 			})
+
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				init_options = {
+					fallbackFlags = { "--std=c++20" },
+				},
+			})
 		end,
+	},
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^5", -- Recommended
+		lazy = false, -- This plugin is already lazy
 	},
 }

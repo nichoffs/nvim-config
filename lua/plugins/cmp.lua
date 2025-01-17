@@ -18,6 +18,7 @@ return {
 				["<C-e>"] = cmp.mapping.abort(), -- Abort the completion menu
 			},
 			sources = cmp.config.sources({
+				{ name = "copilot" },
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
 				{ name = "path" },
