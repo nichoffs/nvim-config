@@ -63,7 +63,11 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 				init_options = {
-					fallbackFlags = { "--std=c++20" },
+					-- fallbackFlags = { "--std=c++20" },
+				},
+				cmd = {
+					"clangd",
+					"--fallback-style=webkit",
 				},
 			})
 		end,
